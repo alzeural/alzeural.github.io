@@ -3,21 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mizuki Learn - Test Layout</title>
+    <title>Mizuki Learn - Elegant Learning Paths</title>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="navbar.css">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles/themes.css">
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/navbar.css">
+    <link rel="stylesheet" href="styles/homepage.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
-    <script src="script.js" defer></script>
 </head>
 <body>
     <!-- Navbar -->
     <nav class="navbar">
         <div class="navbar-container">
-            <a href="index.html" class="navbar-logo">Mizuki Learn</a>
+            <a href="#hero" class="navbar-logo">Mizuki Learn</a>
             <ul class="navbar-menu">
-                <li><a href="#mythology">Mythology</a></li>
-                <li><a href="ai-ml.html">AI-ML</a></li>
+                <li><a href="content/mythology/index.html">Mythology</a></li>
+                <li><a href="content/ai-ml/index.html">AI-ML</a></li>
                 <li><a href="#courses">Courses</a></li>
                 <li><a href="#about">About</a></li>
             </ul>
@@ -93,5 +94,10 @@
     <footer class="footer">
         <p>&copy; 2025 Mizuki Learn. Crafted with Elegance.</p>
     </footer>
+
+    <script src="scripts/theme-switcher.js"></script>
+    <script src="scripts/navbar.js"></script>
+    <script src="scripts/progress-tracker.js"></script>
+    <script src="scripts/auth.js"></script>
 </body>
 </html>
