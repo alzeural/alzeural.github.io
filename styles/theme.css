@@ -1,105 +1,22 @@
-/* Dark Theme (Default) - Exact OpenFiesta gradient */
-.dark-theme {
-    background: linear-gradient(135deg, #0D0D0D 0%, #1A0F0F 25%, #2D1A1A 50%, #1A0F0F 75%, #0D0D0D 100%);
-    background-attachment: fixed;
-    color: #ffffff;
-    min-height: 100vh;
+/* Theme Variables */
+:root {
+    --text-color: #ffffff;
+    --bg-color: #000000;
+    --bg-gradient: linear-gradient(135deg, #4B0000 0%, #000000 100%);
+    --card-bg: rgba(255, 255, 255, 0.1);
+    --card-hover: rgba(139, 0, 0, 0.3);
+    --particle-color1: #8B0000;
+    --particle-color2: #000000;
+    --cta-bg: #8B0000;
 }
 
-.dark-theme .navbar {
-    background: rgba(13, 13, 13, 0.95);
-    backdrop-filter: blur(15px);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-.dark-theme .nav-logo a {
-    color: #FF6B6B;
-    font-weight: bold;
-}
-
-.dark-theme .nav-link {
-    color: #E0E0E0;
-    font-weight: 500;
-}
-
-.dark-theme .nav-link:hover {
-    color: #FF6B6B;
-}
-
-.dark-theme .theme-toggle {
-    color: #FFD93D;
-}
-
-/* Light Theme */
-.light-theme {
-    background: linear-gradient(135deg, #F8F9FA 0%, #E9ECEF 50%, #F8F9FA 100%);
-    background-attachment: fixed;
-    color: #2D3436;
-}
-
-.light-theme .navbar {
-    background: rgba(248, 249, 250, 0.95);
-    backdrop-filter: blur(15px);
-    border-bottom: 1px solid #DEE2E6;
-}
-
-.light-theme .nav-logo a {
-    color: #E74C3C;
-}
-
-.light-theme .nav-link {
-    color: #495057;
-}
-
-.light-theme .nav-link:hover {
-    color: #E74C3C;
-}
-/* Dark theme dropdown */
-.dark-theme .dropdown-menu {
-    background: rgba(13, 13, 13, 0.98);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-.dark-theme .dropdown-item {
-    color: #E0E0E0;
-    background: transparent;
-}
-
-.dark-theme .dropdown-item:hover {
-    background: rgba(255, 107, 107, 0.1);
-    color: #FF6B6B;
-}
-
-.dark-theme .sign-in-link {
-    border-color: #FF6B6B;
-    color: #FF6B6B;
-}
-
-.dark-theme .sign-in-link:hover {
-    background: rgba(255, 107, 107, 0.1);
-}
-
-/* Light theme dropdown */
-.light-theme .dropdown-menu {
-    background: rgba(255, 255, 255, 0.98);
-    border: 1px solid #DEE2E6;
-}
-
-.light-theme .dropdown-item {
-    color: #495057;
-    background: transparent;
-}
-
-.light-theme .dropdown-item:hover {
-    background: rgba(231, 76, 60, 0.1);
-    color: #E74C3C;
-}
-
-.light-theme .sign-in-link {
-    border-color: #E74C3C;
-    color: #E74C3C;
-}
-
-.light-theme .sign-in-link:hover {
-    background: rgba(231, 76, 60, 0.1);
+[data-theme="light"] {
+    --text-color: #333333;
+    --bg-color: #ffffff;
+    --bg-gradient: linear-gradient(135deg, #f5f5f5 0%, #e0e0e0 100%);
+    --card-bg: rgba(0, 0, 0, 0.1);
+    --card-hover: rgba(139, 0, 0, 0.2);
+    --particle-color1: #ff4500;
+    --particle-color2: #666666;
+    --cta-bg: #ff4500;
 }
