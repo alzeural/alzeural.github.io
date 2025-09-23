@@ -1,16 +1,17 @@
-/* Dark theme (default) */
+/* Dark Theme (Default) - OpenFiesta inspired gradient */
 .dark-theme {
-    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
-    color: #e0e0e0;
+    background: linear-gradient(135deg, #0c0c0c 0%, #1a1a1a 25%, #2d1a1a 50%, #1a0c0c 75%, #0c0c0c 100%);
+    color: #ffffff;
+    min-height: 100vh;
 }
 
 .dark-theme .navbar {
-    background-color: rgba(26, 26, 46, 0.9);
+    background: linear-gradient(135deg, rgba(12, 12, 12, 0.95) 0%, rgba(26, 26, 26, 0.95) 100%);
     backdrop-filter: blur(10px);
 }
 
 .dark-theme .nav-logo a {
-    color: #e94560;
+    color: #ff6b6b;
 }
 
 .dark-theme .nav-link {
@@ -18,64 +19,68 @@
 }
 
 .dark-theme .nav-link:hover {
-    color: #e94560;
+    color: #ff6b6b;
+    background: rgba(255, 107, 107, 0.1);
 }
 
-.dark-theme .theme-btn {
-    background-color: #e94560;
-    color: white;
+.dark-theme .theme-toggle {
+    color: #ffd93d;
+    background: rgba(255, 217, 61, 0.1);
 }
 
-.dark-theme .course-card {
-    background-color: rgba(255, 255, 255, 0.05);
-    border: 1px solid rgba(255, 255, 255, 0.1);
+.dark-theme .auth-btn.primary {
+    background: linear-gradient(45deg, #ff6b6b, #ff8e8e);
 }
 
-.dark-theme .progress-bar {
-    background-color: rgba(255, 255, 255, 0.1);
+.dark-theme .auth-btn.secondary {
+    color: #ff6b6b;
+    border-color: #ff6b6b;
 }
 
-.dark-theme .footer {
-    background-color: rgba(15, 23, 42, 0.8);
+.dark-theme .auth-btn.secondary:hover {
+    background: rgba(255, 107, 107, 0.1);
 }
 
-/* Light theme */
+/* Light Theme */
 .light-theme {
-    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
-    color: #333;
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 25%, #f8f9fa 50%, #e9ecef 75%, #f8f9fa 100%);
+    color: #2d3436;
 }
 
 .light-theme .navbar {
-    background-color: rgba(255, 255, 255, 0.9);
+    background: linear-gradient(135deg, rgba(248, 249, 250, 0.95) 0%, rgba(233, 236, 239, 0.95) 100%);
     backdrop-filter: blur(10px);
+    border-bottom: 1px solid #dee2e6;
 }
 
 .light-theme .nav-logo a {
-    color: #4a6cf7;
+    color: #e74c3c;
 }
 
 .light-theme .nav-link {
-    color: #333;
+    color: #495057;
 }
 
 .light-theme .nav-link:hover {
-    color: #4a6cf7;
+    color: #e74c3c;
+    background: rgba(231, 76, 60, 0.1);
 }
 
-.light-theme .theme-btn {
-    background-color: #4a6cf7;
+.light-theme .theme-toggle {
+    color: #f39c12;
+    background: rgba(243, 156, 18, 0.1);
+}
+
+.light-theme .auth-btn.primary {
+    background: linear-gradient(45deg, #e74c3c, #e67e22);
     color: white;
 }
 
-.light-theme .course-card {
-    background-color: white;
-    border: 1px solid #e0e0e0;
+.light-theme .auth-btn.secondary {
+    color: #e74c3c;
+    border-color: #e74c3c;
 }
 
-.light-theme .progress-bar {
-    background-color: #e0e0e0;
-}
-
-.light-theme .footer {
-    background-color: rgba(255, 255, 255, 0.8);
+.light-theme .auth-btn.secondary:hover {
+    background: rgba(231, 76, 60, 0.1);
 }
