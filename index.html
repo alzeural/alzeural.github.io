@@ -1,1 +1,103 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mizuki Learn - Programming Education Platform</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/themes.css">
+</head>
+<body class="dark-theme">
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="index.html">Mizuki Learn</a>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="#html" class="nav-link">HTML</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#css" class="nav-link">CSS</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#javascript" class="nav-link">JavaScript</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#python" class="nav-link">Python</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#sql" class="nav-link">SQL</a>
+                </li>
+            </ul>
+            <div class="theme-toggle">
+                <button id="theme-switcher" class="theme-btn">Light Mode</button>
+            </div>
+        </div>
+    </nav>
+
+    <main class="main-content">
+        <section class="hero">
+            <div class="hero-content">
+                <h1>Learn Programming with Mizuki</h1>
+                <p>Master web development and programming through our structured, hands-on curriculum</p>
+                <a href="#courses" class="cta-button">Start Learning</a>
+            </div>
+        </section>
+
+        <section id="courses" class="courses-section">
+            <h2>Available Courses</h2>
+            <div class="course-grid">
+                <div class="course-card" data-course="html">
+                    <h3>HTML Fundamentals</h3>
+                    <p>Learn the building blocks of web pages</p>
+                    <div class="progress-bar">
+                        <div class="progress-fill" data-progress="0"></div>
+                    </div>
+                    <a href="content/html-lessons.html" class="course-link">Start Learning</a>
+                </div>
+                <div class="course-card" data-course="css">
+                    <h3>CSS Styling</h3>
+                    <p>Make your websites beautiful and responsive</p>
+                    <div class="progress-bar">
+                        <div class="progress-fill" data-progress="0"></div>
+                    </div>
+                    <a href="content/css-lessons.html" class="course-link">Start Learning</a>
+                </div>
+                <div class="course-card" data-course="javascript">
+                    <h3>JavaScript Programming</h3>
+                    <p>Add interactivity to your websites</p>
+                    <div class="progress-bar">
+                        <div class="progress-fill" data-progress="0"></div>
+                    </div>
+                    <a href="content/js-lessons.html" class="course-link">Start Learning</a>
+                </div>
+                <div class="course-card" data-course="python">
+                    <h3>Python Basics</h3>
+                    <p>Learn one of the most versatile programming languages</p>
+                    <div class="progress-bar">
+                        <div class="progress-fill" data-progress="0"></div>
+                    </div>
+                    <a href="#" class="course-link">Coming Soon</a>
+                </div>
+                <div class="course-card" data-course="sql">
+                    <h3>SQL Database</h3>
+                    <p>Master database management and queries</p>
+                    <div class="progress-bar">
+                        <div class="progress-fill" data-progress="0"></div>
+                    </div>
+                    <a href="#" class="course-link">Coming Soon</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2023 Mizuki Learn. All rights reserved.</p>
+    </footer>
+
+    <script src="scripts/theme-switcher.js"></script>
+    <script src="scripts/progress-tracker.js"></script>
+</body>
+</html>
