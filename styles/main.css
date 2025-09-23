@@ -1,27 +1,30 @@
-/* Reset and base styles */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-:root {
-    --transition: all 0.3s ease;
-}
-
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Montserrat', sans-serif;
     line-height: 1.6;
-    transition: var(--transition);
+    color: var(--text-color);
+    background: var(--bg-gradient);
+    min-height: 100vh;
+    overflow-x: hidden;
 }
 
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 2rem;
+a {
+    text-decoration: none;
+    color: inherit;
 }
 
-/* Utility classes */
-.text-center { text-align: center; }
-.mt-2 { margin-top: 2rem; }
-.mb-2 { margin-bottom: 2rem; }
+button {
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+/* Smooth Scroll */
+html {
+    scroll-behavior: smooth;
+}
