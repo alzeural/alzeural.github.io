@@ -3,113 +3,95 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mizuki Learn - Where Learning Never Ends</title>
-    <link rel="stylesheet" href="styles/main.css">
-    <link rel="stylesheet" href="styles/navbar.css">
-    <link rel="stylesheet" href="styles/themes.css">
-    <link rel="stylesheet" href="styles/homepage.css">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <title>Mizuki Learn - Test Layout</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="navbar.css">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="script.js" defer></script>
 </head>
-<body class="dark-theme">
-    <!-- Navigation -->
-    <div id="navbar-container"></div>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <a href="index.html" class="navbar-logo">Mizuki Learn</a>
+            <ul class="navbar-menu">
+                <li><a href="#mythology">Mythology</a></li>
+                <li><a href="ai-ml.html">AI-ML</a></li>
+                <li><a href="#courses">Courses</a></li>
+                <li><a href="#about">About</a></li>
+            </ul>
+            <button id="theme-toggle" class="theme-toggle">🌙</button>
+            <button id="mobile-toggle" class="mobile-toggle">☰</button>
+        </div>
+    </nav>
 
-    <!-- Hero Section -->
-    <section class="hero">
+    <!-- Hero Section with Video Background -->
+    <section id="hero" class="hero">
+        <video class="hero-video" autoplay muted loop playsinline>
+            <source src="https://raw.githubusercontent.com/dishana11/dishana11.github.io/main/assets/publications.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <div class="hero-overlay"></div>
         <div class="hero-content">
-            <h1>The things you desired to learn would be taught here</h1>
-            <p class="hero-subtitle">Oops landed at the wrong page? Your desire wouldn't be ending except it would keep increasing!</p>
-            <div class="hero-buttons">
-                <a href="#paths" class="cta-button">Start Learning</a>
-                <a href="#about" class="cta-button secondary">Explore More</a>
+            <h1 class="hero-title">Unlock Worlds of Knowledge</h1>
+            <p class="hero-subtitle">Elegant paths to mastery in technology and beyond.</p>
+            <a href="#courses" class="cta-button">Start Exploring</a>
+        </div>
+        <canvas class="mouse-shadow"></canvas>
+    </section>
+
+    <!-- Courses Section -->
+    <section id="courses" class="courses">
+        <h2 class="section-title">Our Paths</h2>
+        <div class="courses-grid">
+            <div class="course-card">
+                <h3>R Programming Language</h3>
+                <p>Coming soon.</p>
             </div>
+            <div class="course-card">
+                <h3>CUDA</h3>
+                <p>Coming soon.</p>
+            </div>
+            <div class="course-card">
+                <h3>Computer Vision</h3>
+                <p>Coming soon.</p>
+            </div>
+            <div class="course-card">
+                <h3>Neural Networks</h3>
+                <p>Coming soon.</p>
+            </div>
+            <div class="course-card">
+                <h3>Fortran</h3>
+                <p>Coming soon.</p>
+            </div>
+            <div class="course-card">
+                <h3>Binary Trees</h3>
+                <p>Coming soon.</p>
+            </div>
+        </div>
+        <div class="explore-more">
+            <a href="#more" class="explore-button">Explore More</a>
         </div>
     </section>
 
-    <!-- Learning Paths Section -->
-    <section id="paths" class="learning-paths">
-        <div class="container">
-            <h2>Choose Your Learning Path</h2>
-            <div class="paths-grid">
-                <div class="path-card" data-path="mythology">
-                    <div class="path-icon">
-                        <i class="fas fa-monument"></i>
-                    </div>
-                    <h3>Mythology</h3>
-                    <p>Explore Greek gods and goddesses through interactive fictional content</p>
-                    <a href="content/mythology/index.html" class="path-link">Begin Journey</a>
-                </div>
-                
-                <div class="path-card" data-path="programming">
-                    <div class="path-icon">
-                        <i class="fas fa-code"></i>
-                    </div>
-                    <h3>Programming</h3>
-                    <p>Master various programming languages from basics to advanced</p>
-                    <a href="content/programming/index.html" class="path-link">Start Coding</a>
-                </div>
-                
-                <div class="path-card" data-path="dsa">
-                    <div class="path-icon">
-                        <i class="fas fa-diagram-project"></i>
-                    </div>
-                    <h3>Data Structures & Algorithms</h3>
-                    <p>Learn DSA concepts with practical implementations</p>
-                    <a href="content/dsa/index.html" class="path-link">Solve Problems</a>
-                </div>
-                
-                <div class="path-card" data-path="ai-ml">
-                    <div class="path-icon">
-                        <i class="fas fa-brain"></i>
-                    </div>
-                    <h3>AI & Machine Learning</h3>
-                    <p>Computer Vision, Deep Learning, Neural Networks, Robotics</p>
-                    <a href="content/ai-ml/index.html" class="path-link">Explore AI</a>
-                </div>
-                
-                <div class="path-card" data-path="hpc">
-                    <div class="path-icon">
-                        <i class="fas fa-server"></i>
-                    </div>
-                    <h3>High Performance Computing</h3>
-                    <p>Parallel computing, distributed systems, and optimization</p>
-                    <a href="content/hpc/index.html" class="path-link">Dive In</a>
-                </div>
-            </div>
+    <!-- About Section -->
+    <section id="about" class="about">
+        <h2>About Mizuki Learn</h2>
+        <p>An open-source platform for sophisticated learning experiences.</p>
+    </section>
+
+    <!-- Marquee Section -->
+    <section class="marquee-section">
+        <div class="marquee">
+            <span>Discover R Programming</span><span>•</span><span>CUDA Acceleration</span><span>•</span><span>Computer Vision</span><span>•</span><span>Neural Networks</span><span>•</span><span>Fortran Mastery</span><span>•</span><span>Binary Trees</span><span>•</span><span>And Beyond...</span>
+            <span>Discover R Programming</span><span>•</span><span>CUDA Acceleration</span><span>•</span><span>Computer Vision</span><span>•</span><span>Neural Networks</span><span>•</span><span>Fortran Mastery</span><span>•</span><span>Binary Trees</span><span>•</span><span>And Beyond...</span>
         </div>
     </section>
 
-    <!-- Features Section -->
-    <section class="features">
-        <div class="container">
-            <h2>Why Learn with Mizuki?</h2>
-            <div class="features-grid">
-                <div class="feature">
-                    <i class="fas fa-book-open"></i>
-                    <h3>Structured Curriculum</h3>
-                    <p>Well-organized lessons that build upon each other</p>
-                </div>
-                <div class="feature">
-                    <i class="fas fa-check-circle"></i>
-                    <h3>Progress Tracking</h3>
-                    <p>Mark lessons complete and track your learning journey</p>
-                </div>
-                <div class="feature">
-                    <i class="fas fa-laptop-code"></i>
-                    <h3>Hands-on Projects</h3>
-                    <p>Apply what you learn with real-world projects</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
+    <!-- Footer -->
     <footer class="footer">
-        <div class="container">
-            <p>&copy; 2023 Mizuki Learn. Where curiosity meets knowledge.</p>
-        </div>
+        <p>&copy; 2025 Mizuki Learn. Crafted with Elegance.</p>
     </footer>
-
-    <script src="scripts/navbar.js"></script>
-    <script src="scripts/theme-switcher.js"></script>
 </body>
 </html>
