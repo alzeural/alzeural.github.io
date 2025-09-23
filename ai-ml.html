@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mizuki Learn - AI & ML</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="navbar.css">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <a href="index.html" class="navbar-logo">Mizuki Learn</a>
+            <ul class="navbar-menu">
+                <li><a href="index.html#mythology">Mythology</a></li>
+                <li><a href="ai-ml.html">AI-ML</a></li>
+                <li><a href="index.html#courses">Courses</a></li>
+                <li><a href="index.html#about">About</a></li>
+            </ul>
+            <button id="theme-toggle" class="theme-toggle">🌙</button>
+            <button id="mobile-toggle" class="mobile-toggle">☰</button>
+        </div>
+    </nav>
+
+    <!-- AI-ML Section with Video Background -->
+    <section id="ai-ml" class="hero">
+        <video class="hero-video" autoplay muted loop playsinline>
+            <source src="https://raw.githubusercontent.com/dishana11/dishana11.github.io/main/assets/publications.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <div class="hero-overlay"></div>
+        <div class="courses">
+            <h2 class="section-title">AI & ML Paths</h2>
+            <div class="courses-grid">
+                <div class="course-card">
+                    <h3>Computer Vision</h3>
+                    <p>Coming soon.</p>
+                </div>
+                <div class="course-card">
+                    <h3>Neural Networks</h3>
+                    <p>Coming soon.</p>
+                </div>
+                <div class="course-card">
+                    <h3>Deep Learning</h3>
+                    <p>Coming soon.</p>
+                </div>
+            </div>
+            <div class="explore-more">
+                <a href="#more" class="explore-button">Explore</a>
+            </div>
+        </div>
+        <canvas class="mouse-shadow"></canvas>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2025 Mizuki Learn. Crafted with Elegance.</p>
+    </footer>
+</body>
+</html>
