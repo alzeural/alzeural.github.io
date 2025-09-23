@@ -54,3 +54,52 @@
 .light-theme .nav-link:hover {
     color: #E74C3C;
 }
+/* Dark theme dropdown */
+.dark-theme .dropdown-menu {
+    background: rgba(13, 13, 13, 0.98);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.dark-theme .dropdown-item {
+    color: #E0E0E0;
+    background: transparent;
+}
+
+.dark-theme .dropdown-item:hover {
+    background: rgba(255, 107, 107, 0.1);
+    color: #FF6B6B;
+}
+
+.dark-theme .sign-in-link {
+    border-color: #FF6B6B;
+    color: #FF6B6B;
+}
+
+.dark-theme .sign-in-link:hover {
+    background: rgba(255, 107, 107, 0.1);
+}
+
+/* Light theme dropdown */
+.light-theme .dropdown-menu {
+    background: rgba(255, 255, 255, 0.98);
+    border: 1px solid #DEE2E6;
+}
+
+.light-theme .dropdown-item {
+    color: #495057;
+    background: transparent;
+}
+
+.light-theme .dropdown-item:hover {
+    background: rgba(231, 76, 60, 0.1);
+    color: #E74C3C;
+}
+
+.light-theme .sign-in-link {
+    border-color: #E74C3C;
+    color: #E74C3C;
+}
+
+.light-theme .sign-in-link:hover {
+    background: rgba(231, 76, 60, 0.1);
+}
