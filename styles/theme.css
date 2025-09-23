@@ -1,60 +1,50 @@
-/* Dark Theme (Default) - OpenFiesta inspired gradient */
+/* Dark Theme (Default) - Exact OpenFiesta gradient */
 .dark-theme {
-    background: linear-gradient(135deg, #0c0c0c 0%, #1a1a1a 25%, #2d1a1a 50%, #1a0c0c 75%, #0c0c0c 100%);
+    background: linear-gradient(135deg, #0D0D0D 0%, #1A0F0F 25%, #2D1A1A 50%, #1A0F0F 75%, #0D0D0D 100%);
+    background-attachment: fixed;
     color: #ffffff;
     min-height: 100vh;
 }
 
 .dark-theme .navbar {
-    background: linear-gradient(135deg, rgba(12, 12, 12, 0.95) 0%, rgba(26, 26, 26, 0.95) 100%);
-    backdrop-filter: blur(10px);
+    background: rgba(13, 13, 13, 0.95);
+    backdrop-filter: blur(15px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .dark-theme .nav-logo a {
-    color: #ff6b6b;
+    color: #FF6B6B;
+    font-weight: bold;
 }
 
 .dark-theme .nav-link {
-    color: #e0e0e0;
+    color: #E0E0E0;
+    font-weight: 500;
 }
 
 .dark-theme .nav-link:hover {
-    color: #ff6b6b;
-    background: rgba(255, 107, 107, 0.1);
+    color: #FF6B6B;
 }
 
 .dark-theme .theme-toggle {
-    color: #ffd93d;
-    background: rgba(255, 217, 61, 0.1);
-}
-
-.dark-theme .auth-btn.primary {
-    background: linear-gradient(45deg, #ff6b6b, #ff8e8e);
-}
-
-.dark-theme .auth-btn.secondary {
-    color: #ff6b6b;
-    border-color: #ff6b6b;
-}
-
-.dark-theme .auth-btn.secondary:hover {
-    background: rgba(255, 107, 107, 0.1);
+    color: #FFD93D;
 }
 
 /* Light Theme */
 .light-theme {
-    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 25%, #f8f9fa 50%, #e9ecef 75%, #f8f9fa 100%);
-    color: #2d3436;
+    background: linear-gradient(135deg, #F8F9FA 0%, #E9ECEF 50%, #F8F9FA 100%);
+    background-attachment: fixed;
+    color: #2D3436;
 }
 
 .light-theme .navbar {
-    background: linear-gradient(135deg, rgba(248, 249, 250, 0.95) 0%, rgba(233, 236, 239, 0.95) 100%);
-    backdrop-filter: blur(10px);
-    border-bottom: 1px solid #dee2e6;
+    background: rgba(248, 249, 250, 0.95);
+    backdrop-filter: blur(15px);
+    border-bottom: 1px solid #DEE2E6;
 }
 
 .light-theme .nav-logo a {
-    color: #e74c3c;
+    color: #E74C3C;
 }
 
 .light-theme .nav-link {
@@ -62,25 +52,5 @@
 }
 
 .light-theme .nav-link:hover {
-    color: #e74c3c;
-    background: rgba(231, 76, 60, 0.1);
-}
-
-.light-theme .theme-toggle {
-    color: #f39c12;
-    background: rgba(243, 156, 18, 0.1);
-}
-
-.light-theme .auth-btn.primary {
-    background: linear-gradient(45deg, #e74c3c, #e67e22);
-    color: white;
-}
-
-.light-theme .auth-btn.secondary {
-    color: #e74c3c;
-    border-color: #e74c3c;
-}
-
-.light-theme .auth-btn.secondary:hover {
-    background: rgba(231, 76, 60, 0.1);
+    color: #E74C3C;
 }
