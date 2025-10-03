@@ -1,0 +1,98 @@
+---
+layout: default
+title: "Courses"
+---
+
+<link rel="stylesheet" href="{{ '/styles/courses.css' | relative_url }}">
+
+{% include navbar.html %}
+
+<div class="courses-page">
+
+  <!-- Left Sidebar Filters -->
+  <aside class="courses-sidebar">
+    <h3>Filters</h3>
+    <ul id="course-filters">
+      <li data-filter="All">All</li>
+      <li data-filter="Open Source">Open Source</li>
+      <li data-filter="System Design">System Design</li>
+      <li data-filter="Data Structures">Data Structures</li>
+      <li data-filter="Algorithms">Algorithms</li>
+      <li data-filter="Coding Questions">Coding Questions</li>
+    </ul>
+
+    <!-- Subtopics for active course -->
+    <h3>Subtopics</h3>
+    <ul id="course-subtopics">
+      <!-- JS will populate this dynamically -->
+    </ul>
+  </aside>
+
+  <!-- Main Content -->
+  <section class="courses-main">
+
+    <!-- Top-left course image -->
+    <div class="course-image">
+      <img id="selected-course-img" src="{{ '/assets/images/courses/github.png' | relative_url }}" alt="Course Image">
+    </div>
+
+    <!-- Course Content -->
+    <div class="course-content" id="course-content">
+      {% assign sorted_courses = site.courses | sort: 'title' %}
+      {% for course in sorted_courses %}
+      <article class="course-card" data-category="{{ course.category }}" data-course="{{ course.slug }}">
+        <h2>{{ course.title }}</h2>
+        <div class="course-markdown">
+          {{ course.content | markdownify }}
+        </div>
+      </article>
+      {% endfor %}
+    </div>
+
+  </section>
+</div>
+
+<script>
+// Filter courses by category
+const filters = document.querySelectorAll('#course-filters li');
+const courses = document.querySelectorAll('.course-card');
+const courseImg = document.getElementById('selected-course-img');
+const subtopics = document.getElementById('course-subtopics');
+
+function updateSubtopics(courseCard){
+  subtopics.innerHTML = '';
+  const headings = courseCard.querySelectorAll('h2, h3');
+  headings.forEach(h => {
+    const li = document.createElement('li');
+    li.textContent = h.textContent;
+    li.addEventListener('click', () => {
+      h.scrollIntoView({behavior: 'smooth', block: 'start'});
+    });
+    subtopics.appendChild(li);
+  });
+}
+
+filters.forEach(f => {
+  f.addEventListener('click', () => {
+    const category = f.getAttribute('data-filter');
+    courses.forEach(c => {
+      if(c.dataset.category === category || category === "All"){
+        c.style.display = 'block';
+        courseImg.src = c.querySelector('img')?.src || courseImg.src;
+        updateSubtopics(c);
+      } else {
+        c.style.display = 'none';
+      }
+    });
+  });
+});
+
+// Initialize first course
+if(courses.length > 0){
+  courses[0].style.display = 'block';
+  courseImg.src = courses[0].querySelector('img')?.src || courseImg.src;
+  updateSubtopics(courses[0]);
+}
+</script>
+
+{% include footer.html %}
