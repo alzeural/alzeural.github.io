@@ -1,3 +1,2 @@
 ##Welcome to Alzeural
-
-#We have been summonned
+#Center or elegance
