@@ -5,11 +5,54 @@
             <li><a href="/content/mythology/index.html">Mythology</a></li>
             <li><a href="/content/ai-ml/index.html">AI-ML</a></li>
             <li><a href="#courses">Courses</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="/blog.html">Blogs</a></li>  <!-- Added Blogs link -->
+            <li><a href="/researches.html">Researches</a></li> <!-- New Researches link -->
+            <li><a href="/blog.html">Blogs</a></li>
         </ul>
-        <input type="text" id="search-bar" placeholder="Search blogs..." class="search-bar">  <!-- Search bar -->
+
+        <!-- Search Button -->
+        <button id="search-toggle" class="search-toggle">🔍</button>
+
+        <!-- Hidden Search Bar -->
+        <div id="search-container" style="display:none;">
+            <input type="text" id="search-bar" placeholder="Search..." class="search-bar">
+            <button id="search-btn">Search</button>
+        </div>
+
         <button id="theme-toggle" class="theme-toggle">🌙</button>
         <button id="mobile-toggle" class="mobile-toggle">☰</button>
     </div>
 </nav>
+
+<script>
+    // Toggle search bar visibility
+    const searchToggle = document.getElementById('search-toggle');
+    const searchContainer = document.getElementById('search-container');
+    searchToggle.addEventListener('click', () => {
+        searchContainer.style.display = searchContainer.style.display === 'none' ? 'flex' : 'none';
+        if(searchContainer.style.display === 'flex') {
+            document.getElementById('search-bar').focus();
+        }
+    });
+
+    // Search functionality
+    const searchBtn = document.getElementById('search-btn');
+    const searchInput = document.getElementById('search-bar');
+
+    function performSearch(query) {
+        // Replace this with your search logic
+        // Example: Redirect to a search results page with query parameter
+        window.location.href = `/search.html?q=${encodeURIComponent(query)}`;
+    }
+
+    searchBtn.addEventListener('click', () => {
+        const query = searchInput.value.trim();
+        if(query) performSearch(query);
+    });
+
+    searchInput.addEventListener('keydown', (e) => {
+        if(e.key === 'Enter') {
+            const query = searchInput.value.trim();
+            if(query) performSearch(query);
+        }
+    });
+</script>
