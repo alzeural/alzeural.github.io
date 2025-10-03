@@ -1,1 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ page.title | default: site.title }}</title>
+
+  <!-- CSS Stylesheets -->
+  <link rel="stylesheet" href="{{ '/styles/main.css' | relative_url }}">
+  <link rel="stylesheet" href="{{ '/styles/navbar.css' | relative_url }}">
+  <link rel="stylesheet" href="{{ '/styles/footer.css' | relative_url }}">
+  <link rel="stylesheet" href="{{ '/styles/homepage.css' | relative_url }}">
+  <link rel="stylesheet" href="{{ '/styles/theme.css' | relative_url }}">
+</head>
+<body>
+
+  <!-- Navbar -->
+  {% include navbar.html %}
+
+  <!-- Main page content -->
+  <main>
+    {{ content }}
+  </main>
+
+  <!-- Footer -->
+  {% include footer.html %}
+
+</body>
+</html>
 
