@@ -1,0 +1,19 @@
+title: Alzeural - Elegant Learning Paths
+description: Unlock Worlds of Knowledge
+url: https://your-username.github.io/alzeural  # Replace with your site URL
+baseurl: ""  # Or "/alzeural" if repo-named
+theme: minima  # Optional base theme; customize with your CSS
+plugins:
+  - jekyll-feed
+  - jekyll-lunr-js-search  # For search index
+lunr_search:
+  json_output: /search.json  # Generates search index
+collections:
+  posts:
+    output: true
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
