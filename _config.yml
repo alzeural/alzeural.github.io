@@ -1,19 +1,50 @@
+# Site settings
 title: Alzeural - Elegant Learning Paths
 description: Unlock Worlds of Knowledge
-url: https://your-username.github.io/alzeural  # Replace with your site URL
-baseurl: ""  # Or "/alzeural" if repo-named
-theme: minima  # Optional base theme; customize with your CSS
+url: https://your-username.github.io/alzeural  # Replace with your GitHub Pages URL
+baseurl: ""  # Or "/alzeural" if your repo is named alzeural
+theme: minima  # Optional base theme; can be overridden with custom CSS
+
+# Plugins
 plugins:
   - jekyll-feed
-  - jekyll-lunr-js-search  # For search index
+  - jekyll-lunr-js-search  # For search indexing
+
+# Lunr search configuration
 lunr_search:
-  json_output: /search.json  # Generates search index
+  json_output: /search.json  # Generates search index for JS search
+
+# Collections
 collections:
   posts:
     output: true
+  mythology:
+    output: true
+    permalink: /mythology/:path/
+
+# Defaults
 defaults:
   - scope:
       path: ""
       type: "posts"
     values:
       layout: "post"
+  - scope:
+      path: "_mythology"
+      type: "mythology"
+    values:
+      layout: "mythology"  # You can create a mythology.html layout in _layouts
+      permalink: /mythology/:path/
+
+# Exclude files/folders from build
+exclude:
+  - README.md
+  - node_modules
+  - vendor
+  - Gemfile
+  - Gemfile.lock
+
+# Markdown processor
+markdown: kramdown
+kramdown:
+  input: GFM
