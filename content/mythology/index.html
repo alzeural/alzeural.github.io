@@ -1,63 +1,140 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alzeural 
-</title>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../../styles/themes.css">
-    <link rel="stylesheet" href="../../styles/main.css">
-    <link rel="stylesheet" href="../../styles/navbar.css">
-    <link rel="stylesheet" href="../../styles/homepage.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Alzeural - Mythology</title>
+
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+
+<!-- Global CSS -->
+<link rel="stylesheet" href="../../assets/styles/main.css">
+
+<!-- Page-specific CSS -->
+<link rel="stylesheet" href="../../assets/styles/mythology.css">
 </head>
 <body>
-    <!-- Navbar -->
-    <nav class="navbar">
-        <div class="navbar-container">
-            <a href="../../index.html" class="navbar-logo">Alzeural</a>
-            <ul class="navbar-menu">
-                <li><a href="../mythology/index.html">Mythology</a></li>
-                <li><a href="../ai-ml/index.html">AI-ML</a></li>
-                <li><a href="../../index.html#courses">Courses</a></li>
-                <li><a href="../../index.html#about">About</a></li>
-            </ul>
-            <button id="theme-toggle" class="theme-toggle">🌙</button>
-            <button id="mobile-toggle" class="mobile-toggle">☰</button>
-        </div>
-    </nav>
 
-    <!-- Mythology Section with Fixed Video -->
-    <section id="mythology" class="hero">
-        <video class="hero-video" autoplay muted loop playsinline>
-            <source src="https://raw.githubusercontent.com/dishana11/dishana11.github.io/main/assets/publications.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-        </video>
-        <div class="hero-overlay"></div>
-        <div class="hero-content">
-            <p class="hero-subtitle">Welcome to the world of mythology. Here you can read about Norse, Greek, or Indian mythology.</p>
-        </div>
-    </section>
+<!-- Navbar -->
+<nav class="navbar">
+  <a href="#hero" class="navbar-logo">Alzeural</a>
+  <ul class="navbar-menu">
+    <li><a href="index.html">Mythology</a></li>
+    <li><a href="../ai-ml/index.html">AI-ML</a></li>
+    <li><a href="#courses">Courses</a></li>
+    <li><a href="#about">About</a></li>
+  </ul>
+  <button class="theme-toggle">🌙</button>
+  <button class="mobile-toggle">☰</button>
+</nav>
 
-    <!-- About Section -->
-    <section id="about" class="about">
-        <h2>About Alzeural</h2>
-        <p>An open-source platform for sophisticated learning experiences.</p>
-    </section>
+<!-- Hero Section -->
+<div class="background">
+  <img id="bg-image" src="https://github.com/alzeural/alzeural.github.io/raw/main/assets/images/vikey.jpg" alt="Background Image">
+  <video class="hero-video" id="video1" muted>
+    <source src="https://github.com/alzeural/alzeural.github.io/raw/main/assets/videos/vikey1.mp4" type="video/mp4">
+  </video>
+  <video class="hero-video" id="video2" muted>
+    <source src="https://github.com/alzeural/alzeural.github.io/raw/main/assets/videos/vikey2.mp4" type="video/mp4">
+  </video>
+  <canvas id="snow-canvas"></canvas>
+</div>
 
-    <!-- Marquee Section -->
-    <section class="marquee-section">
-        <div class="marquee">
-            <span>Discover R Programming</span><span>•</span><span>CUDA Acceleration</span><span>•</span><span>Computer Vision</span><span>•</span><span>Neural Networks</span><span>•</span><span>Fortran Mastery</span><span>•</span><span>Binary Trees</span><span>•</span><span>And Beyond...</span>
-            <span>Discover R Programming</span><span>•</span><span>CUDA Acceleration</span><span>•</span><span>Computer Vision</span><span>•</span><span>Neural Networks</span><span>•</span><span>Fortran Mastery</span><span>•</span><span>Binary Trees</span><span>•</span><span>And Beyond...</span>
-        </div>
-    </section>
+<!-- Icon Section -->
+<div class="icon-section">
+  <div>
+    <img src="https://github.com/alzeural/alzeural.github.io/raw/main/assets/images/icon%20(4).webp" alt="Icon 1">
+    <p>"Whispers of the old gods"</p>
+  </div>
+  <div>
+    <img src="https://github.com/alzeural/alzeural.github.io/raw/main/assets/images/icon%20(2).webp" alt="Icon 2">
+    <p>"Legends etched in stone"</p>
+  </div>
+  <div>
+    <img src="https://github.com/alzeural/alzeural.github.io/raw/main/assets/images/icon%20(3).webp" alt="Icon 3">
+    <p>"The call of forgotten myths"</p>
+  </div>
+</div>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <p>&copy; 2025 Alzeural. Crafted with Elegance.</p>
-    </footer>
+<!-- Split Container -->
+<div class="split-container">
+  <div class="split-left">
+    <video autoplay muted loop>
+      <source src="https://github.com/alzeural/alzeural.github.io/raw/main/assets/videos/norse%20call.mp4" type="video/mp4">
+    </video>
+  </div>
+  <div class="split-right">
+    Discover More Legends
+  </div>
+</div>
 
-    <script src="../../scripts/main.js"></script>
+<!-- Markdown Content Section -->
+<div class="markdown-content" id="myth-content" style="padding:40px 20px; max-width:1000px; margin:auto; color:#ccc; line-height:1.6;">
+  <!-- Greek myths content will be injected here -->
+</div>
+
+<!-- Image Section -->
+<div class="image-section">
+  <div>
+    <img src="https://github.com/alzeural/alzeural.github.io/raw/main/assets/images/vik%20(3).webp" alt="Image 1">
+    <a href="#">Learn More</a>
+  </div>
+  <div>
+    <img src="https://github.com/alzeural/alzeural.github.io/raw/main/assets/images/vik%20(4).webp" alt="Image 2">
+    <a href="#">Learn More</a>
+  </div>
+  <div>
+    <img src="https://github.com/alzeural/alzeural.github.io/raw/main/assets/images/vik%20(2).webp" alt="Image 3">
+    <a href="#">Learn More</a>
+  </div>
+</div>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="footer-container">
+    <div class="footer-brand">
+      <div class="footer-logo">ALZEURAL</div>
+      <p class="footer-tagline">High quality coding education maintained by an open source community.</p>
+    </div>
+    <div class="footer-column">
+      <h3>About us</h3>
+      <ul>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Team</a></li>
+        <li><a href="#">Blog</a></li>
+        <li><a href="#">Success Stories</a></li>
+      </ul>
+    </div>
+    <div class="footer-column">
+      <h3>Support</h3>
+      <ul>
+        <li><a href="#">FAQ</a></li>
+        <li><a href="#">Contribute</a></li>
+        <li><a href="#">Contact us</a></li>
+      </ul>
+    </div>
+    <div class="footer-column">
+      <h3>Guides</h3>
+      <ul>
+        <li><a href="#">Community guides</a></li>
+        <li><a href="#">Installation guides</a></li>
+      </ul>
+    </div>
+    <div class="footer-column">
+      <h3>Legal</h3>
+      <ul>
+        <li><a href="#">Terms</a></li>
+        <li><a href="#">Privacy</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2025 Alzeural. All rights reserved.</p>
+  </div>
+</footer>
+
+<!-- Scripts -->
+<script src="../../assets/js/mythology.js"></script>
 </body>
 </html>
