@@ -1,22 +1,14 @@
 <nav class="navbar">
     <div class="navbar-container">
         <a href="/" class="navbar-logo">Alzeural</a>
-        <ul class="navbar-menu">
+        <ul class="navbar-menu" id="navbar-menu">
             <li><a href="/content/mythology/index.html">Mythology</a></li>
             <li><a href="/content/ai-ml/index.html">AI-ML</a></li>
-            <li><a href="#courses">Courses</a></li>
-            <li><a href="/researches.html">Researches</a></li> <!-- New Researches link -->
+            <li><a href="/content/courses/index.html">Courses</a></li>
+            <li><a href="/researches.html">Researches</a></li>
             <li><a href="/blog.html">Blogs</a></li>
+            <li><a href="/about.html">About</a></li>
         </ul>
-
-        <!-- Search Button -->
-        <button id="search-toggle" class="search-toggle">🔍</button>
-
-        <!-- Hidden Search Bar -->
-        <div id="search-container" style="display:none;">
-            <input type="text" id="search-bar" placeholder="Search..." class="search-bar">
-            <button id="search-btn">Search</button>
-        </div>
 
         <button id="theme-toggle" class="theme-toggle">🌙</button>
         <button id="mobile-toggle" class="mobile-toggle">☰</button>
@@ -24,35 +16,65 @@
 </nav>
 
 <script>
-    // Toggle search bar visibility
-    const searchToggle = document.getElementById('search-toggle');
-    const searchContainer = document.getElementById('search-container');
-    searchToggle.addEventListener('click', () => {
-        searchContainer.style.display = searchContainer.style.display === 'none' ? 'flex' : 'none';
-        if(searchContainer.style.display === 'flex') {
-            document.getElementById('search-bar').focus();
-        }
-    });
+    const mobileToggle = document.getElementById('mobile-toggle');
+    const navbarMenu = document.getElementById('navbar-menu');
 
-    // Search functionality
-    const searchBtn = document.getElementById('search-btn');
-    const searchInput = document.getElementById('search-bar');
-
-    function performSearch(query) {
-        // Replace this with your search logic
-        // Example: Redirect to a search results page with query parameter
-        window.location.href = `/search.html?q=${encodeURIComponent(query)}`;
-    }
-
-    searchBtn.addEventListener('click', () => {
-        const query = searchInput.value.trim();
-        if(query) performSearch(query);
-    });
-
-    searchInput.addEventListener('keydown', (e) => {
-        if(e.key === 'Enter') {
-            const query = searchInput.value.trim();
-            if(query) performSearch(query);
-        }
+    mobileToggle.addEventListener('click', () => {
+        navbarMenu.classList.toggle('active');
     });
 </script>
+
+<style>
+/* Navbar base */
+.navbar {
+    background: #222;
+    color: #fff;
+    padding: 10px 20px;
+}
+.navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.navbar-logo {
+    font-weight: bold;
+    text-decoration: none;
+    color: #fff;
+}
+.navbar-menu {
+    display: flex;
+    gap: 15px;
+    list-style: none;
+}
+.navbar-menu li a {
+    text-decoration: none;
+    color: #fff;
+}
+
+/* Hide on mobile until ☰ clicked */
+.mobile-toggle {
+    display: none;
+    font-size: 20px;
+    background: none;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
+    .navbar-menu {
+        display: none;
+        flex-direction: column;
+        background: #111;
+        padding: 10px;
+        margin-top: 10px;
+    }
+    .navbar-menu.active {
+        display: flex;
+    }
+    .mobile-toggle {
+        display: block;
+    }
+}
+</style>
