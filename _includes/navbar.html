@@ -1,50 +1,26 @@
 <nav class="navbar">
-  <div class="navbar-container">
-    <a href="/" class="navbar-logo">Alzeural</a>
-    <ul class="navbar-menu">
-      <li><a href="/content/mythology/index.html">Mythology</a></li>
-      <li><a href="/content/ai-ml/index.html">AI-ML</a></li>
-      <li><a href="#courses">Courses</a></li>
-      <li><a href="/researches.html">Researches</a></li>
-      <li><a href="/blog.html">Blogs</a></li>
-    </ul>
-    <button id="search-toggle" class="search-toggle">🔍</button>
-    <div id="search-container" style="display:none;">
-      <input type="text" id="search-bar" placeholder="Search..." class="search-bar">
-      <button id="search-btn">Search</button>
+    <div class="navbar-container">
+        <a href="/" class="navbar-brand">
+            <img src="https://github.com/alzeural/alzeural.github.io/blob/main/assets/images/alz.jpeg?raw=true" 
+                 alt="Alzeural Logo" 
+                 class="navbar-logo-img">
+            <span class="navbar-logo-text">Alzeural</span>
+        </a>
+        <ul class="navbar-menu">
+            <li><a href="/content/mythology/index.html">Mythology</a></li>
+            <li><a href="/content/ai-ml/index.html">AI-ML</a></li>
+            <li><a href="#courses">Courses</a></li>
+            <li><a href="/researches.html">Researches</a></li>
+            <li><a href="/blog.html">Blogs</a></li>
+        </ul>
+        <div class="navbar-actions">
+            <div id="search-container">
+                <input type="text" id="search-bar" placeholder="Search..." class="search-bar">
+                <button id="search-btn">Search</button>
+            </div>
+            <button id="search-toggle" class="search-toggle">🔍</button>
+            <button id="theme-toggle" class="theme-toggle">🌙</button>
+            <button id="mobile-toggle" class="mobile-toggle">☰</button>
+        </div>
     </div>
-    <button id="theme-toggle" class="theme-toggle">🌙</button>
-    <button id="mobile-toggle" class="mobile-toggle">☰</button>
-  </div>
 </nav>
-
-<script>
-  const searchToggle = document.getElementById('search-toggle');
-  const searchContainer = document.getElementById('search-container');
-  
-  searchToggle.addEventListener('click', () => {
-    searchContainer.style.display = searchContainer.style.display === 'none' ? 'flex' : 'none';
-    if(searchContainer.style.display === 'flex') {
-      document.getElementById('search-bar').focus();
-    }
-  });
-
-  const searchBtn = document.getElementById('search-btn');
-  const searchInput = document.getElementById('search-bar');
-  
-  function performSearch(query) {
-    window.location.href = `/search.html?q=${encodeURIComponent(query)}`;
-  }
-  
-  searchBtn.addEventListener('click', () => {
-    const query = searchInput.value.trim();
-    if(query) performSearch(query);
-  });
-  
-  searchInput.addEventListener('keydown', (e) => {
-    if(e.key === 'Enter') {
-      const query = searchInput.value.trim();
-      if(query) performSearch(query);
-    }
-  });
-</script>
