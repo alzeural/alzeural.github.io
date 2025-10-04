@@ -12,7 +12,7 @@
 /* This rule should be in a global CSS file that all pages link to, NOT just navbar.css. */
 /* If you want to keep it here, ensure it's the only body rule: */
 body {
-    padding-top: 80px; 
+    
 }
 
 
@@ -22,7 +22,7 @@ body {
     top: 0;
     width: 100%;
     /* This line keeps the navbar itself dark and semi-transparent */
-    background: transparent; 
+    background: rgba(0, 0, 0, 0.8); 
     backdrop-filter: blur(10px);
     z-index: 1000;
     padding: 1rem 0;
