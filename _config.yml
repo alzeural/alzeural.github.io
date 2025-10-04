@@ -21,6 +21,9 @@ collections:
   mythology:
     output: true
     permalink: /mythology/:path/
+  courses:               # <-- NEW COLLECTION
+    output: true
+    permalink: /courses/:path/
 
 # Defaults
 defaults:
@@ -29,12 +32,20 @@ defaults:
       type: "posts"
     values:
       layout: "post"
+
   - scope:
       path: "_mythology"
       type: "mythology"
     values:
-      layout: "mythology"  # You can create a mythology.html layout in _layouts
+      layout: "mythology"   # layout file: _layouts/mythology.html
       permalink: /mythology/:path/
+
+  - scope:
+      path: "_courses"
+      type: "courses"
+    values:
+      layout: "course"      # layout file: _layouts/course.html
+      permalink: /courses/:path/
 
 # Exclude files/folders from build
 exclude:
