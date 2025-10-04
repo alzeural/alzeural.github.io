@@ -139,6 +139,8 @@ body {
     background: #e03d00;
 }
 
+/* ... above 768px styles remain the same ... */
+
 .navbar-menu.active {
     display: flex;
     flex-direction: column;
@@ -146,10 +148,10 @@ body {
     top: 70px;
     left: 0;
     width: 100%;
-    background: rgba(0, 0, 0, 0.95);
+    background: #000000; /* Solid Black for contrast on mobile menu */
     padding: 1rem;
     gap: 1rem;
-    backdrop-filter: blur(20px);
+    /* backdrop-filter removed/ignored */
 }
 
 @media (max-width: 768px) {
@@ -165,7 +167,7 @@ body {
         top: 70px;
         left: 0;
         width: 100%;
-        background: rgba(0, 0, 0, 0.95);
+        background: #000000; /* Also set the search container background to solid black */
         padding: 1rem;
         margin-right: 0;
     }
