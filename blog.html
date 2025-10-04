@@ -24,18 +24,4 @@ title: "The Alzeural Tea"
         </article>
         {% endfor %}
     </div>
-
-    <aside class="blog-sidebar">
-        <h3>Categories / Tags</h3>
-        {% assign all_tags = site.tags | sort %}
-        {% if all_tags.size > 0 %}
-        <ul class="tag-list">
-            {% for tag in all_tags %}
-            <li><a href="{{ '/tags/' | append: tag[0] | relative_url }}">{{ tag[0] }}</a></li>
-            {% endfor %}
-        </ul>
-        {% else %}
-        <p>No tags yet.</p>
-        {% endif %}
-    </aside>
 </main>
