@@ -93,8 +93,6 @@
 @media (max-width: 768px) {
     .blog-main {
         flex-direction: column;
-    }
-    .blog-main {
         padding: 2rem 1rem;
     }
 

@@ -28,8 +28,9 @@ title: "The Alzeural Tea"
     <aside class="blog-sidebar">
         <h3>Categories / Tags</h3>
         <ul class="tag-list">
-            {% for tag in site.tags %}
-            <li><a href="#{{ tag[0] | slugify }}">{{ tag[0] }}</a></li>
+            {% assign all_tags = site.tags | sort %}
+            {% for tag in all_tags %}
+            <li><a href="{{ '/tags/' | append: tag[0] | relative_url }}">{{ tag[0] }}</a></li>
             {% endfor %}
         </ul>
     </aside>
