@@ -2,37 +2,35 @@
 layout: default
 ---
 
-<main class="blog-main">
-    <div class="blog-container">
-        <div class="blog-content">
-            <h1 class="blog-header">Posts tagged with "{{ page.tag }}"</h1>
+<div class="blog-main">
+    <div class="blog-content">
+        <h1 class="blog-header">Posts tagged with "{{ page.tag }}"</h1>
 
-            {% for post in site.tags[page.tag] %}
-            <article class="blog-post">
-                <h2 class="post-title">{{ post.title }}</h2>
-                
-                {% if post.image %}
-                <img src="{{ post.image }}" alt="{{ post.title }}" class="post-image">
-                {% endif %}
-                
-                <p class="post-date">{{ post.date | date: "%B %d, %Y" }}</p>
-                
-                <div class="post-content">
-                    {{ post.excerpt }}
-                    <a href="{{ post.url | relative_url }}" class="read-more">Read More</a>
-                </div>
-            </article>
-            {% endfor %}
-        </div>
-
-        <aside class="blog-sidebar">
-            <h3>Categories / Tags</h3>
-            <ul class="tag-list">
-                {% assign all_tags = site.tags | sort %}
-                {% for tag in all_tags %}
-                <li><a href="{{ '/tags/' | append: tag[0] | relative_url }}">{{ tag[0] }}</a></li>
-                {% endfor %}
-            </ul>
-        </aside>
+        {% for post in site.tags[page.tag] %}
+        <article class="blog-post">
+            <h2 class="post-title">{{ post.title }}</h2>
+            
+            {% if post.image %}
+            <img src="{{ post.image }}" alt="{{ post.title }}" class="post-image">
+            {% endif %}
+            
+            <p class="post-date">{{ post.date | date: "%B %d, %Y" }}</p>
+            
+            <div class="post-content">
+                {{ post.excerpt }}
+                <a href="{{ post.url | relative_url }}" class="read-more">Read More</a>
+            </div>
+        </article>
+        {% endfor %}
     </div>
-</main>
+
+    <aside class="blog-sidebar">
+        <h3>Categories / Tags</h3>
+        <ul class="tag-list">
+            {% assign all_tags = site.tags | sort %}
+            {% for tag in all_tags %}
+            <li><a href="{{ '/tags/' | append: tag[0] | relative_url }}">{{ tag[0] }}</a></li>
+            {% endfor %}
+        </ul>
+    </aside>
+</div>
