@@ -1,16 +1,28 @@
 .blog-main {
+    display: flex;
     max-width: 1200px;
     margin: 0 auto;
     padding: 4rem 2rem;
+    gap: 2rem;
 }
 
 .blog-content {
-    /* No specific rules needed here anymore, 
-       the default block behavior is fine. */
+    flex: 1 1 0;
+    min-width: 0;
+}
+
+.new-sidebar {
+    flex: 0 0 200px; /* Adjust width as needed */
 }
 
 @media (max-width: 768px) {
     .blog-main {
+        flex-direction: column;
         padding: 2rem 1rem;
+    }
+
+    .new-sidebar {
+        margin-top: 2rem;
+        width: 100%;
     }
 }
