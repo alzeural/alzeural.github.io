@@ -8,21 +8,21 @@
     box-sizing: border-box;
 }
 
-/* Base Body Styles (Crucial for fixed navbar and background) */
+/* IMPORTANT: The body padding MUST be applied globally to push content down. */
+/* This rule should be in a global CSS file that all pages link to, NOT just navbar.css. */
+/* If you want to keep it here, ensure it's the only body rule: */
 body {
-    font-family: 'Montserrat', sans-serif;
-    background: #0a0a0a;
-    color: var(--text-color);
-    padding-top: 80px; /* To prevent content from being hidden under the fixed navbar */
-    min-height: 100vh;
+    padding-top: 80px; 
 }
+
 
 /* Navbar Styles */
 .navbar {
     position: fixed;
     top: 0;
     width: 100%;
-    background: rgba(0, 0, 0, 0.8);
+    /* This line keeps the navbar itself dark and semi-transparent */
+    background: rgba(0, 0, 0, 0.8); 
     backdrop-filter: blur(10px);
     z-index: 1000;
     padding: 1rem 0;
