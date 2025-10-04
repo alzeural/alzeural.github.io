@@ -3,6 +3,8 @@ layout: default
 title: "The Alzeural Tea"
 ---
 
+{% include navbar.html %}
+
 <main class="blog-main">
     <div class="blog-container">
         <div class="blog-content">
@@ -19,8 +21,7 @@ title: "The Alzeural Tea"
                 <p class="post-date">{{ post.date | date: "%B %d, %Y" }}</p>
                 
                 <div class="post-content">
-                    {{ post.excerpt }}
-                    <a href="{{ post.url | relative_url }}" class="read-more">Read More</a>
+                    {{ post.content }}
                 </div>
             </article>
             {% endfor %}
@@ -37,3 +38,5 @@ title: "The Alzeural Tea"
         </aside>
     </div>
 </main>
+
+{% include footer.html %}
