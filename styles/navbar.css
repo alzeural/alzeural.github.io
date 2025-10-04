@@ -22,7 +22,7 @@ body {
     top: 0;
     width: 100%;
     /* This line keeps the navbar itself dark and semi-transparent */
-    background: rgba(0, 0, 0, 0.8); 
+    background: transparent; 
     backdrop-filter: blur(10px);
     z-index: 1000;
     padding: 1rem 0;
