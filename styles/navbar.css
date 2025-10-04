@@ -1,3 +1,23 @@
+:root {
+    --text-color: #ffffff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Base Body Styles (Crucial for fixed navbar and background) */
+body {
+    font-family: 'Montserrat', sans-serif;
+    background: #0a0a0a;
+    color: var(--text-color);
+    padding-top: 80px; /* To prevent content from being hidden under the fixed navbar */
+    min-height: 100vh;
+}
+
+/* Navbar Styles */
 .navbar {
     position: fixed;
     top: 0;
@@ -6,6 +26,11 @@
     backdrop-filter: blur(10px);
     z-index: 1000;
     padding: 1rem 0;
+    transition: box-shadow 0.3s ease;
+}
+
+.navbar:hover {
+    box-shadow: 0 4px 20px rgba(10, 10, 10, 0.8);
 }
 
 .navbar-container {
@@ -17,7 +42,26 @@
     padding: 0 2rem;
 }
 
-.navbar-logo {
+.navbar-brand {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    text-decoration: none;
+}
+
+.navbar-logo-img {
+    height: 35px;
+    width: 35px;
+    border-radius: 50%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.navbar-logo-img:hover {
+    transform: scale(1.1);
+}
+
+.navbar-logo-text {
     font-size: 1.5rem;
     font-weight: 700;
     color: #ff4500;
@@ -30,6 +74,8 @@
 }
 
 .navbar-menu a {
+    color: var(--text-color);
+    text-decoration: none;
     padding: 0.5rem 1rem;
     border-radius: 4px;
     transition: background 0.3s ease, color 0.3s ease;
@@ -37,31 +83,73 @@
 }
 
 .navbar-menu a:hover {
-    background: var(--card-hover);
+    background: none;
+    color: #bdbdbd;
 }
 
-.theme-toggle, .mobile-toggle {
+.navbar-actions {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.search-toggle, .theme-toggle, .mobile-toggle {
+    background: none;
+    border: none;
     font-size: 1.2rem;
     padding: 0.5rem;
     border-radius: 50%;
     color: var(--text-color);
-    transition: transform 0.3s ease;
+    cursor: pointer;
+    transition: transform 0.3s ease, background 0.3s ease;
 }
 
-.theme-toggle:hover, .mobile-toggle:hover {
+.search-toggle:hover, .theme-toggle:hover, .mobile-toggle:hover {
     transform: scale(1.1);
+    background: rgba(255, 255, 255, 0.1);
+}
+
+#search-container {
+    display: none;
+    align-items: center;
+    gap: 0.5rem;
+    margin-right: 1rem;
+}
+
+.search-bar {
+    padding: 0.5rem;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 4px;
+    background: rgba(255, 255, 255, 0.1);
+    color: var(--text-color);
+    width: 200px;
+}
+
+#search-btn {
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 4px;
+    background: #ff4500;
+    color: white;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+#search-btn:hover {
+    background: #e03d00;
 }
 
 .navbar-menu.active {
     display: flex;
     flex-direction: column;
     position: fixed;
-    top: 60px;
+    top: 70px;
     left: 0;
     width: 100%;
     background: rgba(0, 0, 0, 0.95);
     padding: 1rem;
     gap: 1rem;
+    backdrop-filter: blur(20px);
 }
 
 @media (max-width: 768px) {
@@ -70,5 +158,19 @@
     }
     .navbar-menu.active {
         display: flex;
+    }
+    
+    #search-container {
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        background: rgba(0, 0, 0, 0.95);
+        padding: 1rem;
+        margin-right: 0;
+    }
+    
+    .search-bar {
+        width: 100%;
     }
 }
