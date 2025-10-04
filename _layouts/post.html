@@ -15,15 +15,6 @@
           <a href="/blog.html" class="back-btn">← Back to Blogs</a>
         </article>
     </div>
-
-    <aside class="blog-sidebar">
-        <h3>Categories</h3>
-        <ul class="tag-list">
-          {% for tag in site.tags %}
-            <li><a href="/tags/{{ tag | first | slugify }}.html">{{ tag | first }} ({{ tag | last | size }})</a></li>
-          {% endfor %}
-        </ul>
-    </aside>
 </div>
 
 <style>
