@@ -18,14 +18,11 @@
   {% include navbar.html %}
 
   <!-- Main page content -->
-  <main>
+  <main {% if page.add_padding != false %}class="content-padding"{% endif %}>
     {{ content }}
   </main>
 
   <!-- Footer -->
-  {% include footer.html %}
-
-  ...
   {% include footer.html %}
 
   <script src="{{ '/scripts/background.js' | relative_url }}"></script>
@@ -36,6 +33,3 @@
 
 </body>
 </html>
-</body>
-</html>
-

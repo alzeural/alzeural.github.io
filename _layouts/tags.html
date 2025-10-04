@@ -1,14 +1,13 @@
 ---
 layout: default
-title: "The Alzeural Tea"
 ---
 
 <main class="blog-main">
     <div class="blog-container">
         <div class="blog-content">
-            <h1 class="blog-header">The Alzeural Tea</h1>
+            <h1 class="blog-header">Posts tagged with "{{ page.tag }}"</h1>
 
-            {% for post in site.posts %}
+            {% for post in site.tags[page.tag] %}
             <article class="blog-post">
                 <h2 class="post-title">{{ post.title }}</h2>
                 
