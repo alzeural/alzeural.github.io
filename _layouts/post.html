@@ -1,17 +1,30 @@
-<article class="blog-post">
-  <h1>{{ page.title }}</h1>
-  <p class="post-date">{{ page.date | date: "%B %d, %Y" }}</p>
+<div class="blog-main">
+    <div class="blog-content">
+        <article class="blog-post">
+          <h1>{{ page.title }}</h1>
+          <p class="post-date">{{ page.date | date: "%B %d, %Y" }}</p>
 
-  {% if page.image %}
-    <img src="{{ page.image }}" alt="{{ page.title }}" class="post-image">
-  {% endif %}
+          {% if page.image %}
+            <img src="{{ page.image }}" alt="{{ page.title }}" class="post-image">
+          {% endif %}
 
-  <div class="post-content">
-    {{ content }}
-  </div>
+          <div class="post-content">
+            {{ content }}
+          </div>
 
-  <a href="/blog.html" class="back-btn">← Back to Blogs</a>
-</article>
+          <a href="/blog.html" class="back-btn">← Back to Blogs</a>
+        </article>
+    </div>
+
+    <aside class="blog-sidebar">
+        <h3>Categories</h3>
+        <ul class="tag-list">
+          {% for tag in site.tags %}
+            <li><a href="/tags/{{ tag | first | slugify }}.html">{{ tag | first }} ({{ tag | last | size }})</a></li>
+          {% endfor %}
+        </ul>
+    </aside>
+</div>
 
 <style>
 .blog-post {
