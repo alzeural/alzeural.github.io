@@ -1,22 +1,25 @@
 .blog-main {
     display: flex;
     flex-direction: row;
-    flex-wrap: nowrap;
+    flex-wrap: nowrap; /* This is key - we want it side by side */
     max-width: 1200px;
     margin: 0 auto;
     padding: 4rem 2rem;
     gap: 2rem; /* space between content and sidebar */
 }
 
+/* Let the content area be flexible and take up the remaining space */
 .blog-content {
-    flex: 3;
-    min-width: 0; /* allows shrinking */
+    flex: 1 1 0;
+    min-width: 0; /* Crucial for preventing overflow from wide content */
+    border: 1px solid red; /* DEBUG */
 }
 
+/* Give the sidebar a fixed width that doesn't change */
 .blog-sidebar {
-    flex: 1;
-    min-width: 200px;
+    flex: 0 0 280px; /* Don't grow, don't shrink, base width of 280px */
     padding-left: 2rem;
+    border: 1px solid blue; /* DEBUG */
 }
 
 @media (max-width: 768px) {
@@ -27,5 +30,7 @@
     .blog-sidebar {
         padding-left: 0;
         margin-top: 2rem;
+        flex-basis: auto; /* Reset flex-basis for column layout */
+        width: 100%;
     }
 }
