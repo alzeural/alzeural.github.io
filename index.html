@@ -22,45 +22,19 @@ add_padding: false
 <section id="courses" class="courses">
   <h2 class="section-title">Our Paths</h2>
   <div class="courses-grid">
-    <div class="course-card">
-      <a href="content/programming/index.html">
-        <h3>R Programming Language</h3>
-        <p>Coming soon.</p>
-      </a>
-    </div>
-    <div class="course-card">
-      <a href="content/hpc/index.html">
-        <h3>CUDA</h3>
-        <p>Coming soon.</p>
-      </a>
-    </div>
-    <div class="course-card">
-      <a href="content/ai-ml/index.html">
-        <h3>Computer Vision</h3>
-        <p>Coming soon.</p>
-      </a>
-    </div>
-    <div class="course-card">
-      <a href="content/ai-ml/index.html">
-        <h3>Neural Networks</h3>
-        <p>Coming soon.</p>
-      </a>
-    </div>
-    <div class="course-card">
-      <a href="content/programming/index.html">
-        <h3>Fortran</h3>
-        <p>Coming soon.</p>
-      </a>
-    </div>
-    <div class="course-card">
-      <a href="content/dsa/index.html">
-        <h3>Binary Trees</h3>
-        <p>Coming soon.</p>
-      </a>
-    </div>
+    {% for course in site.collections %}
+      {% if course.label != "posts" %}
+        <div class="course-card">
+          <a href="{{ course.label | prepend: '/content/courses/' | append: '/index.html' | relative_url }}">
+            <h3>{{ course.label | capitalize }}</h3>
+            <p>Coming soon.</p>
+          </a>
+        </div>
+      {% endif %}
+    {% endfor %}
   </div>
   <div class="explore-more">
-    <a href="#more" class="explore-button">Explore More</a>
+    <a href="/content/courses/index.html" class="explore-button">Explore More</a>
   </div>
 </section>
 
