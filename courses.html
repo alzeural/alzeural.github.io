@@ -6,6 +6,13 @@ title: "Courses"
 <main class="courses-main">
     <h1 class="courses-header">Our Courses</h1>
     <div class="course-list">
+        <div class="course-item">
+            <a href="/courses/github/index.html">
+                <img src="/assets/images/courses/github.png" alt="GitHub Logo" class="course-logo">
+                <h2 class="course-title">GitHub</h2>
+            </a>
+            <p class="course-description">Learn the basics of Git and GitHub.</p>
+        </div>
         {% for course in site.collections %}
             {% if course.label != "posts" %}
                 <div class="course-item">
