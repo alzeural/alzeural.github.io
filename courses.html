@@ -1,0 +1,21 @@
+---
+layout: default
+title: "Courses"
+---
+
+<main class="courses-main">
+    <h1 class="courses-header">Our Courses</h1>
+    <div class="course-list">
+        {% for course in site.collections %}
+            {% if course.label != "posts" %}
+                <div class="course-item">
+                    <a href="{{ course.label | prepend: '/content/courses/' | append: '/index.html' }}">
+                        <img src="/assets/images/courses/{{ course.label }}.png" alt="{{ course.label | capitalize }} Logo" class="course-logo">
+                        <h2 class="course-title">{{ course.label | capitalize }}</h2>
+                    </a>
+                    <p class="course-description">{{ course.metadata.description }}</p>
+                </div>
+            {% endif %}
+        {% endfor %}
+    </div>
+</main>

@@ -1,4 +1,10 @@
-collections_dir: content
+title: Alzeural
 collections:
-  courses:
+  posts:
+    output: true
+  github:
+    output: true
+  research:
+    output: true
+  mythology:
     output: true

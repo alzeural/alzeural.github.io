@@ -1,16 +1,17 @@
-.courses-page-wrapper {
+body {
+  margin: 0;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
+  background-color: rgb(64, 1, 1);
+  font-family: Arial, sans-serif;
+  color: white;
   gap: 40px;
   padding: 20px;
-  background-color: rgb(64, 1, 1);
-  color: white;
-  font-family: Arial, sans-serif;
-  width: 100%;
 }
 
-.courses-page-wrapper .container {
+.container {
   position: relative;
   background-color: #111;
   padding: 50px 40px;
@@ -22,7 +23,7 @@
   transition: box-shadow 0.3s ease;
 }
 
-.courses-page-wrapper .logo {
+.logo {
   position: absolute;
   top: -30px;
   left: 30px;
@@ -35,27 +36,26 @@
   overflow: hidden;
 }
 
-.courses-page-wrapper .logo img {
+.logo img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: cover; /* Changed to cover to fill the container */
   border-radius: 15px;
 }
 
-.courses-page-wrapper .title {
-  margin-top: 12px;
-  font-size: 28px;
-  color: white;
+h1 {
+  margin-top: 20px;
+  font-size: 24px;
 }
 
-.courses-page-wrapper p {
+p {
   margin: 20px 0;
   font-size: 16px;
   line-height: 1.5;
   text-align: left;
 }
 
-.courses-page-wrapper .btn {
+.btn {
   padding: 12px 30px;
   background-color: transparent;
   color: white;
@@ -66,12 +66,12 @@
   transition: background 0.3s;
 }
 
-.courses-page-wrapper .btn:hover {
+.btn:hover {
   background-color: white;
   color: #111;
 }
 
-.courses-page-wrapper .header {
+.header {
   position: absolute;
   top: 0;
   left: 0;
@@ -84,19 +84,25 @@
   padding-left: 120px;
 }
 
-.courses-page-wrapper .divider {
+.title {
+  margin-top: 12px;
+  font-size: 28px;
+  color: white;
+}
+
+.divider {
   border: none;
   border-top: 1px solid white;
   margin: 20px 0;
 }
 
-.courses-page-wrapper .lessons {
+.lessons {
   font-size: 14px;
   color: grey;
   text-align: left;
 }
 
-.courses-page-wrapper .footer {
+.footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
