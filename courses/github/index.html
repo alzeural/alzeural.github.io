@@ -1,0 +1,19 @@
+---
+layout: default
+custom_stylesheet: /styles/course_page.css
+---
+
+<div class="course-page">
+  <div class="course-header">
+    <img src="https://github.com/alzeural/alzeural.github.io/blob/main/assets/images/courses/github.png?raw=true" alt="GitHub Logo" class="course-logo">
+    <h1>GitHub Course</h1>
+  </div>
+
+  <ul class="lesson-list">
+    {% for lesson in site.github %}
+      <li>
+        <a href="{{ lesson.url | relative_url }}">{{ lesson.title }}</a>
+      </li>
+    {% endfor %}
+  </ul>
+</div>
