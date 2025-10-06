@@ -1,0 +1,17 @@
+---
+layout: default
+title: AWS
+head: <link rel='stylesheet' href='/styles/course_page.css'>
+---
+
+<div class="container">
+  <div class="logo">
+    <img src="/assets/images/aws-logo.png" alt="AWS Logo">
+  </div>
+  <h1>AWS</h1>
+  <ul>
+    {% for post in site.aws %}
+      <li><a href="{{ post.url }}">{{ post.title }}</a></li>
+    {% endfor %}
+  </ul>
+</div>
