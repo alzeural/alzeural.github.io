@@ -1,0 +1,18 @@
+---
+layout: default
+title: "GitHub Course"
+---
+
+<link rel="stylesheet" href="/assets/css/course_page.css">
+
+<div class="course-content">
+  <h1>GitHub Course</h1>
+  <p>Here are the lessons for this course:</p>
+  <ul>
+    {% for file in site.static_files %}
+      {% if file.path contains '_github' %}
+        <li><a href="{{ file.path | relative_url }}">{{ file.name }}</a></li>
+      {% endif %}
+    {% endfor %}
+  </ul>
+</div>

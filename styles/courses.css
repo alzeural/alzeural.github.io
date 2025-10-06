@@ -106,7 +106,8 @@ body {
   text-align: left;
 }
 
-.courses-page-wrapper .card-footer {
+/* Scoped footer style for course cards */
+.courses-page-wrapper .container .footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
