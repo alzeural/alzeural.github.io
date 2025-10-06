@@ -10,7 +10,7 @@
 
 /* Overriding the default page background for the courses page specifically */
 body {
-    background-color: rgb(64, 1, 1);
+  background-color: rgb(64, 1, 1);
 }
 
 .courses-page-wrapper .container {
