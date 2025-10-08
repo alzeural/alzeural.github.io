@@ -4,7 +4,7 @@
 
 ### An Open-Source EdTech Platform *For Learners, By Learners*
 
-[![Contributors](https://img.shields.io/github/contributors/your-username/alzeural)](https://github.com/your-username/alzeural/graphs/contributors)
+[![Contributors](https://img.shields.io/github/contributors/your-username/alzeural)](https://github.com/rezverish/alzeural/graphs/contributors)
 [![Issues](https://img.shields.io/github/issues/your-username/alzeural)](https://github.com/your-username/alzeural/issues)
 [![Forks](https://img.shields.io/github/forks/your-username/alzeural)](https://github.com/your-username/alzeural/network/members)
 [![Stars](https://img.shields.io/github/stars/your-username/alzeural)](https://github.com/your-username/alzeural/stargazers)
