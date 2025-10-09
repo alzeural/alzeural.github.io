@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "GitHub Course"
-head: <link rel='stylesheet' href='/styles/insidercourse.css'>
+custom_stylesheet: /styles/insidercourse.css
 ---
 
 <div class="container">
@@ -10,11 +10,12 @@ head: <link rel='stylesheet' href='/styles/insidercourse.css'>
   </div>
   <h1>GitHub Course</h1>
   <p>Here are the lessons for this course:</p>
+  <p>Number of items in site.github: {{ site.github.size }}</p>
   <ul>
-    {% for post in site.posts %}
-      {% if post.path contains '_github' %}
-        <li><a href="{{ post.url | relative_url }}">{{ post.title }}</a></li>
-      {% endif %}
+    {% for post in site.github %}
+      <li><a href="{{ post.url | relative_url }}">{{ post.title }}</a></li>
+    {% else %}
+      <li>No posts found in site.github collection.</li>
     {% endfor %}
   </ul>
 </div>
