@@ -11,10 +11,8 @@ head: <link rel='stylesheet' href='/styles/insidercourse.css'>
   <h1>GitHub Course</h1>
   <p>Here are the lessons for this course:</p>
   <ul>
-    {% for post in site.posts %}
-      {% if post.path contains '_github' %}
-        <li><a href="{{ post.url | relative_url }}">{{ post.title }}</a></li>
-      {% endif %}
+    {% for post in site.github %}
+      <li><a href="{{ post.url | relative_url }}">{{ post.title }}</a></li>
     {% endfor %}
   </ul>
 </div>
