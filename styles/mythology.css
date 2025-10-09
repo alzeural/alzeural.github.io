@@ -177,6 +177,9 @@
 }
 
 @media (max-width: 768px) {
+    .icon-section, .split-container, .image-section {
+        flex-direction: column;
+    }
     .footer-container { flex-direction: column; }
     .footer-column { min-width: 100%; }
 }
