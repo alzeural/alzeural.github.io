@@ -1,19 +1,19 @@
 ---
 layout: default
 title: "GitHub Course"
-head: <link rel='stylesheet' href='/styles/course_page.css'>
+head: <link rel='stylesheet' href='/styles/insidercourse.css'>
 ---
 
 <div class="container">
-  <div class="logo">
+  <div class="logo course-logo-container">
     <img src="/assets/images/github-logo.png" alt="GitHub Logo">
   </div>
   <h1>GitHub Course</h1>
   <p>Here are the lessons for this course:</p>
   <ul>
-    {% for file in site.static_files %}
-      {% if file.path contains '_github' %}
-        <li><a href="{{ file.path | relative_url }}">{{ file.name }}</a></li>
+    {% for post in site.posts %}
+      {% if post.path contains '_github' %}
+        <li><a href="{{ post.url | relative_url }}">{{ post.title }}</a></li>
       {% endif %}
     {% endfor %}
   </ul>
