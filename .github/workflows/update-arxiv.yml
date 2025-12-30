@@ -1,8 +1,8 @@
-name: Update AI Papers from arXiv
+name: Fetch AI Papers from arXiv
 
 on:
   schedule:
-    - cron: "*/2 * * * *"   # runs every two minutes
+    - cron: "*/8 * * * *"   # runs every two minutes
   workflow_dispatch:
 
 jobs:
